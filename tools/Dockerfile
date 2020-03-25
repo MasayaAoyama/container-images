@@ -1,4 +1,4 @@
-FROM Ubuntu:18.04
+FROM ubuntu:18.04
 
 RUN apt-get -y update && \
     apt-get -y install git sed curl wget jq  && \
