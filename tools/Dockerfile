@@ -5,5 +5,6 @@ RUN apt-get -y update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
     
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/sleep"]
+ARG ["infinity"]
 
