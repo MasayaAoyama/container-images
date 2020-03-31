@@ -6,5 +6,4 @@ RUN apt-get -y update && \
     rm -rf /var/lib/apt/lists/*
     
 ENTRYPOINT ["/bin/sleep"]
-ARG ["infinity"]
-
+CMD ["infinity"]
