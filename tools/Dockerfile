@@ -9,5 +9,5 @@ ENV TINI_VERSION v0.18.0
 RUN curl https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini -o /tini
 RUN chmod +x /tini
 
-ENTRYPOINT ["/usr/local/bin/tini", "--"]
+ENTRYPOINT ["/tini", "--"]
 CMD ["/bin/sleep", "infinity"]
