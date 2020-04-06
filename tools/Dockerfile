@@ -7,7 +7,7 @@ RUN apt-get -y update && \
 
 ENV TINI_VERSION v0.18.0
 ARG ARCH=amd64
-RUN curl https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${ARCH} -o /tini
+RUN curl -sL https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${ARCH} -o /tini
 RUN chmod +x /tini
 
 ENTRYPOINT ["/tini", "--"]
