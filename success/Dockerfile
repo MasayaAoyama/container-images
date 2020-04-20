@@ -1,4 +1,4 @@
 FROM alpine:3.7
 
-ENTRYPOINT ["exit"]
-CMD ["0"]
+ENTRYPOINT ["sh", "-c"]
+CMD ["exit 0"]
