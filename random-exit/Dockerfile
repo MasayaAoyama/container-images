@@ -1,16 +1,5 @@
 FROM ubuntu:20.04
 
-ENV DEBIAN_FRONTEND=noninteractive
+COPY entrypoint.sh /
 
-RUN apt-get -y update && \
-    apt-get -y install curl && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-ENV TINI_VERSION v0.18.0
-ARG ARCH=amd64
-RUN curl -sL https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${ARCH} -o /tini
-RUN chmod +x /tini
-
-ENTRYPOINT ["/tini", "--"]
-CMD ["bash", "-c", "echo $(($RANDOM % 2)) | grep 0"]
+ENTRYPOINT ["/entrypoint.sh"]
