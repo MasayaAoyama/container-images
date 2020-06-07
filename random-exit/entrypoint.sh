@@ -2,9 +2,9 @@
 
 if [ $(($RANDOM % 2)) -eq 0 ]; then
   echo "Succeeded"
-  true
+  exit 0
 else
   echo "Failed"
-  false
+  exit 1
 fi
 
