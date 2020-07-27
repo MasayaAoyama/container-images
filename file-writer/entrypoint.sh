@@ -17,5 +17,6 @@ while true; do
   done
 
   echo "$COUNT times"
+  sleep $INTERVAL_SEC
 done
 
