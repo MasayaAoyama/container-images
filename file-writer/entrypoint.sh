@@ -13,6 +13,7 @@ while true; do
 
   for i in `seq 1 ${NUM_FILES}`; do
     dd if=/dev/urandom of=${TARGET_DIR}/${FILE_PREFIX}-${i}.txt bs=1024 count=${PART_SIZE}
+    echo "$COUNT: $(date)" >> ${TARGET_DIR}/timestamp.txt
   done
 
   echo "$COUNT times"
