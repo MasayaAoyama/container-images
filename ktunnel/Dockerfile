@@ -7,5 +7,5 @@ RUN git clone https://github.com/omrikiei/ktunnel -b ${VERSION} && \
 
 FROM alpine
 COPY --from=builder /go/src/github.com/omrikiei/ktunnel/ktunnel /usr/local/bin/ktunnel
- 
+ENTRYPOINT ["/usr/local/bin/ktunnel"] 
 
